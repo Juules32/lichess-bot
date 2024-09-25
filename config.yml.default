@@ -1,9 +1,9 @@
-token: "xxxxxxxxxxxxxxxxxxxxxx"    # Lichess OAuth2 Token.
+token: "?????"                     # Insert your lichess API access token here. (https://lichess.org/account/oauth/token)
 url: "https://lichess.org/"        # Lichess base URL.
 
 engine:                            # Engine settings.
   dir: "./engines/"                # Directory containing the engine. This can be an absolute path or one relative to lichess-bot/.
-  name: "engine_name"              # Binary name of the engine to use.
+  name: "JuulesPlusPlus.exe"       # Binary name of the engine to use.
   working_dir: ""                  # Directory where the chess engine will read and write files. If blank or missing, the current directory is used.
                                    # NOTE: If working_dir is set, the engine will look for files and directories relative to this directory, not where lichess-bot was launched. Absolute paths are unaffected.
   protocol: "uci"                  # "uci", "xboard" or "homemade"
@@ -87,11 +87,11 @@ engine:                            # Engine settings.
 #   Hash: 256
 
   uci_options:                     # Arbitrary UCI options passed to the engine.
-    Move Overhead: 100             # Increase if your bot flags games too often.
-    Threads: 4                     # Max CPU threads the engine can use.
-    Hash: 512                      # Max memory (in megabytes) the engine can allocate.
-    SyzygyPath: "./syzygy/"        # Paths to Syzygy endgame tablebases that the engine reads.
-    UCI_ShowWDL: true              # Show the chance of the engine winning.
+#    Move Overhead: 100             # Increase if your bot flags games too often.
+#    Threads: 4                     # Max CPU threads the engine can use.
+#    Hash: 512                      # Max memory (in megabytes) the engine can allocate.
+#    SyzygyPath: "./syzygy/"        # Paths to Syzygy endgame tablebases that the engine reads.
+#    UCI_ShowWDL: true              # Show the chance of the engine winning.
 #   go_commands:                   # Additional options to pass to the UCI go command.
 #     nodes: 1                     # Search so many nodes only.
 #     depth: 5                     # Search depth ply only.
@@ -172,9 +172,9 @@ greeting:
   #   {opponent} to insert opponent's name
   #   {me} to insert bot's name
   # Any other words in curly braces will be removed.
-  hello: "Hi! I'm {me}. Good luck! Type !help for a list of commands I can respond to." # Message to send to opponent chat at the start of a game
+  hello: "Hello! I'm {me}. May the best player win!" # Message to send to opponent chat at the start of a game
   goodbye: "Good game!" # Message to send to opponent chat at the end of a game
-  hello_spectators: "Hi! I'm {me}. Type !help for a list of commands I can respond to." # Message to send to spectator chat at the start of a game
+  hello_spectators: "Hi! I'm {me}!" # Message to send to spectator chat at the start of a game
   goodbye_spectators: "Thanks for watching!" # Message to send to spectator chat at the end of a game
 
 # pgn_directory: "game_records"    # A directory where PGN-format records of the bot's games are kept
